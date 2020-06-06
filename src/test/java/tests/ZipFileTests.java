@@ -33,7 +33,6 @@ class ZipFileTests {
         assertThat(actualFileText, containsString(expectedFileText));
     }
 
-
     @Test
     void successfulSearchForTextInZipWithPassword() {
         String source = "src/test/resources/files/files_with_password.zip";

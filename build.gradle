@@ -48,7 +48,7 @@ tasks.withType(Test) {
     systemProperties = System.properties
 }
 
-task tests(type: Test) {
+task file_tests(type: Test) {
     useJUnitPlatform {
         includeTags 'file'
     }

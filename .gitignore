@@ -32,3 +32,5 @@ target/
 .settings/org.eclipse.buildship.core.prefs
 .vscode
 .allure/
+/src/test/resources/files/unzip/
+/src/test/resources/files/unzip_with_password/
