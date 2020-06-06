@@ -33,8 +33,7 @@ class PdfFileTests {
         File actualFile = new File(actualFilePath);
         PDF pdf = new PDF(actualFile);
 
-        assertThat(pdf.title,  containsString(expectedFileText));
-//        assertThat(pdf, PDF.containsText(expectedFileText));
+        assertThat(pdf, PDF.containsText(expectedFileText));
             }
 
 }
