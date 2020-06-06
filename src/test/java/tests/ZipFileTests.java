@@ -34,4 +34,20 @@ class ZipFileTests {
     }
 
 
+    @Test
+    void successfulSearchForTextInZipWithPassword() {
+        String source = "src/test/resources/files/files_with_password.zip";
+        String destination = "src/test/resources/files/unzip_with_password";
+        String password = "qa.guru";
+
+        String expectedFileText = "Here is your text3 in file!";
+
+        new ZipUtils().unzip(source, destination, password);
+//        sleep(10000); or waitUtilFileExists();
+
+        String actualFileText = new FileUtils().readStringFromFile("src/test/resources/files/unzip_with_password/file1.txt");
+        System.out.println("Actual text from file: \n" + actualFileText);
+
+        assertThat(actualFileText, containsString(expectedFileText));
+    }
 }
