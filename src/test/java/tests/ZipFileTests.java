@@ -26,7 +26,7 @@ class ZipFileTests {
         String expectedFileText = "Here is your text3 in file!";
 
         new ZipUtils().unzip(source, destination);
-        sleep(10000); // todo waitUtilFileExists();
+        sleep(1000); // todo waitUtilFileExists();
 
         String actualFileText = new FileUtils().readStringFromFile("src/test/resources/files/unzip/file1.txt");
         System.out.println("Actual text from file: \n" + actualFileText);
@@ -43,7 +43,7 @@ class ZipFileTests {
         String expectedFileText = "Here is your text3 in file!";
 
         new ZipUtils().unzip(source, destination, password);
-        sleep(10000); // todo waitUtilFileExists();
+        sleep(1000); // todo waitUtilFileExists();
 
         String actualFileText = new FileUtils().readStringFromFile("src/test/resources/files/unzip_with_password/file1.txt");
         System.out.println("Actual text from file: \n" + actualFileText);
